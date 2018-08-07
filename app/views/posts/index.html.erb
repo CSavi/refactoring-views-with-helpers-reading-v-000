@@ -10,7 +10,7 @@
     <%= select_tag "author", options_from_collection_for_select(Author.all, "id", "name"), include_blank: true %>
     <%= submit_tag "Filter" %>
   <% end %>
-</div>    
+</div>
 
 <% @posts.each do |post| %>
   <div><%= post.title %> - <%= last_updated post %></div>
