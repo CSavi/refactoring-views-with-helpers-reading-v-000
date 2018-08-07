@@ -281,3 +281,13 @@ Processing by PostsController#index as HTML
   [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (created_at >= '2018-08-07 00:00:00.000000')[0m
   Rendered posts/index.html.erb within layouts/application (10.3ms)
 Completed 200 OK in 37ms (Views: 36.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts?utf8=%E2%9C%93&author=&date=Today&commit=Filter" for 173.73.212.190 at 2018-08-07 15:28:38 +0000
+Cannot render console from 173.73.212.190! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Parameters: {"utf8"=>"✓", "author"=>"", "date"=>"Today", "commit"=>"Filter"}
+  [1m[35mAuthor Load (0.7ms)[0m  SELECT "authors".* FROM "authors"
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE (created_at >= '2018-08-07 00:00:00.000000')[0m
+  Rendered posts/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 27ms (Views: 20.9ms | ActiveRecord: 1.1ms)
