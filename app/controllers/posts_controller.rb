@@ -10,6 +10,9 @@ class PostsController < ApplicationController
 		  else
 		     @posts = Post.where("created_at <?", Time.zone.today.beginning_of_day)
 		  end
+		else
+			#if no filters are applied, show all posts
+			@post = Post.all	
 		end
 	end
 
